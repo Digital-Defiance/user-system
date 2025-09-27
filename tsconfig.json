@@ -1,0 +1,46 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "commonjs",
+    "lib": [
+      "ES2020"
+    ],
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true
+  },
+  "include": [
+    "src/**/*",
+    "tests/services/jwt.spec.ts",
+    "tests/member.spec.ts",
+    "tests/backup-code.spec.ts",
+    "tests/services/symmetric.spec.ts",
+    "tests/services/backup-code.spec.ts",
+    "tests/services/checksum.spec.ts",
+    "tests/services/ecies.spec.ts",
+    "tests/services/crc.spec.ts",
+    "tests/services/fec.spec.ts",
+    "tests/services/key-wrapping.spec.ts",
+    "tests/services/mnemonic.spec.ts",
+    "tests/services/pbkdf2.spec.ts",
+    "tests/services/user.login.spec.ts",
+    "tests/services/user.findUser.spec.ts",
+    "tests/services/user.email-token.spec.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "**/*.spec.ts",
+    "**/*.test.ts"
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "name": "@digitaldefiance/user-system",
+  "sourceRoot": "packages/digitaldefiance-user-system/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "packages/digitaldefiance-user-system/dist",
+        "main": "packages/digitaldefiance-user-system/src/index.ts",
+        "tsConfig": "packages/digitaldefiance-user-system/tsconfig.json"
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "packages/digitaldefiance-user-system/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["packages/digitaldefiance-user-system/**/*.ts"]
+      }
+    }
+  },
+  "implicitDependencies": ["@digitaldefiance/ecies-lib", "@digitaldefiance/i18n-lib"],
+  "tags": ["scope:shared", "type:lib"]
+}
